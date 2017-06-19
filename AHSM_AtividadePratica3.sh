@@ -23,5 +23,11 @@ iptables -P OUTPUT ACCEPT
 # Block INPUT traffic on port 80
 iptables -A INPUT -i eth0 -p tcp --sport 80 -j $ARG
 
+# LOG SSH
+iptables -A INPUT -i eth0 -p tcp --dport 22 -j LOG --log-prefix "SSH LOG:"
+
+# Block INPUT traffic on port 22
+iptables -A INPUT -i eth0 -p tcp --dport 22 -j DROP
+
 # List rules
 iptables -L
