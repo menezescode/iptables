@@ -1,7 +1,9 @@
 #!/bin/bash
 
+# Get first input argument
 ARG=$1
 
+# Argument checking
 if [ -z $ARG ]
 then
 	ARG="ACCEPT"

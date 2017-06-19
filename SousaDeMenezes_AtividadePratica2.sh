@@ -5,7 +5,7 @@ iptables -P INPUT ACCEPT
 iptables -P FORWARD ACCEPT
 iptables -P OUTPUT ACCEPT
 
-# Clean all the rules
+# Clean all the added rules
 iptables -F
 
 # Drop default INPUT policy
